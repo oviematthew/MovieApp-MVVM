@@ -3,4 +3,6 @@
     <string name="movie_name">Movie Name</string>
     <string name="movie_genre">Genre</string>
     <string name="save_button">Save</string>
+    <string name="movieNameText">Movie - Avatar</string>
+    <string name="movieGenreText">Genre - Action</string>
 </resources>
