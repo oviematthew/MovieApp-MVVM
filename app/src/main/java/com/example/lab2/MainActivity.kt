@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-        val movieAdapter = MovieAdapter(movieList, this)
+        val movieAdapter = MovieAdapter(movieList)
 
         //To specify the vertical layout
         binding.rvMovies.layoutManager = LinearLayoutManager(this)
