@@ -13,7 +13,8 @@
         android:layout_height="43dp"
         android:layout_marginTop="10dp"
         android:inputType="text"
-        android:text="@string/movie_name"
+        android:text=""
+        android:hint="@string/enter_movie_name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -25,7 +26,8 @@
         android:layout_marginTop="10dp"
         android:ems="10"
         android:inputType="text"
-        android:text="@string/movie_genre"
+        android:text=""
+        android:hint="@string/enter_genre"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nameText" />
@@ -43,8 +45,8 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvMovies"
-        android:layout_width="352dp"
-        android:layout_height="470dp"
+        android:layout_width="322dp"
+        android:layout_height="447dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

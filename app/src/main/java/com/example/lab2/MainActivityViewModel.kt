@@ -7,14 +7,18 @@ import com.example.lab2.model.Movies
 
 
 class MainActivityViewModel: ViewModel() {
-    val movie1 = Movies("Avatar", "Action")
-    val movieLiveData = MutableLiveData<Movies>()
+    private val movieList = mutableListOf<Movies>()
+    val movieLiveData = MutableLiveData<List<Movies>>()
 
+
+    //value of liveData is set to the movielist which will keep updating
     init {
-        movieLiveData.value = movie1
+        movieLiveData.value = movieList
     }
 
-    fun addToMovieList(){
-
+    //function to add movie to list
+    fun addToMovieList(movie: Movies){
+        movieList.add(movie)
+        movieLiveData.value = movieList
     }
 }

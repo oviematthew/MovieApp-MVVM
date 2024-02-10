@@ -1,5 +1,6 @@
 package com.example.lab2
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -18,11 +19,13 @@ class MovieAdapter(private val movieList: MutableList<Movies>):
         var movieGenre: TextView
 
         init {
+            // find the textview's from the created xml to be used
             movieName = view.findViewById(R.id.movieNameText)
             movieGenre = view.findViewById(R.id.movieGenreText)
         }
     }
 
+    //set view to xml file created, and inflate
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovieViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(
             R.layout.item_layout, parent, false
@@ -30,14 +33,17 @@ class MovieAdapter(private val movieList: MutableList<Movies>):
         return MovieViewHolder(view)
     }
 
+    //return a the count of all items in the list (a mandatory method)
     override fun getItemCount(): Int {
         return movieList.count()
     }
 
     override fun onBindViewHolder(holder: MovieViewHolder, position: Int) {
+        //binding the xml to the movielist parameters
         holder.movieName.text = movieList[position].name
         holder.movieGenre.text = movieList[position].genre
     }
+
 }
 
 
