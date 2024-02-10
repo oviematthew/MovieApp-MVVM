@@ -19,6 +19,8 @@ class MainActivity : AppCompatActivity() {
     @SuppressLint("NotifyDataSetChanged")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        //using binding to set the layout
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -41,7 +43,7 @@ class MainActivity : AppCompatActivity() {
         binding.rvMovies.layoutManager = LinearLayoutManager(this)
         binding.rvMovies.adapter = movieAdapter
 
-        //on button click add movies
+        //on button click check for empty text and add movies
         handleButtonClick()
     }
 
