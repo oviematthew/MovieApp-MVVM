@@ -59,6 +59,10 @@ class MainActivity : AppCompatActivity() {
 
                 // Add that movie to the ViewModel
                 mainActivityViewModel.addToMovieList(newMovie)
+
+                //clear after entry
+                binding.nameText.text.clear()
+                binding.genreText.text.clear()
             } else {
                 // Show a message or handle the case when fields are empty
                 showToast("Please enter both movie name and genre.")
